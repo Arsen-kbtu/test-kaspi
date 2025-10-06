@@ -12,3 +12,4 @@ class Product(Base):
     reviews_count = Column(Integer, nullable=True)
     min_price = Column(Integer, nullable=True)
     max_price = Column(Integer, nullable=True)
+    images = Column(JSON, nullable=True)

@@ -7,6 +7,13 @@
   ],
   "rating": 4.9,
   "reviews_count": 1299,
-  "min_price": 714019,
-  "max_price": 914445
+  "min_price": 713012,
+  "max_price": 914445,
+  "images": [
+    "https://resources.cdn-kaspi.kz/img/m/p/hcf/h69/87295489343518.png?format=gallery-medium",
+    "https://resources.cdn-kaspi.kz/img/m/p/h08/hd3/87295489376286.png?format=gallery-medium",
+    "https://resources.cdn-kaspi.kz/img/m/p/h04/h8b/87295489409054.png?format=gallery-medium",
+    "https://resources.cdn-kaspi.kz/img/m/p/hfc/h0c/87295489441822.png?format=gallery-medium",
+    "https://i.ytimg.com/vi/XyBdLR0rskA/default.jpg"
+  ]
 }

@@ -14,3 +14,4 @@ class ProductInfo(BaseModel):
     reviews_count: Optional[int] = Field(None, description="Количество отзывов")
     min_price: Optional[int] = Field(None, description="Минимальная цена в тенге")
     max_price: Optional[int] = Field(None, description="Максимальная цена в тенге")
+    images: Optional[List[str]] = None

@@ -78,8 +78,23 @@ class KaspiParser:
                 text = price_elements.last.text_content().strip()
                 max_price = int(re.sub(r"[^\d]", "", text))
 
-            browser.close()
+            images = []
+            image_elements = page.locator(".item__slider-thumb-pic")
+            count = image_elements.count()
 
+            for i in range(count):
+                try:
+                    # Получаем src или data-src атрибут изображения
+                    img = image_elements.nth(i)
+                    src = img.get_attribute("src") or img.get_attribute("data-src")
+                    if src:
+                        if not src.startswith("http"):
+                            src = "https:" + src
+                        images.append(src)
+                except Exception as e:
+                    self.logger.error(f"Ошибка при получении изображения: {e}")
+            browser.close()
+            # Добавляем изображения в результат
             return ProductInfo(
                 name=name_text,
                 categories=categories,
@@ -87,4 +102,5 @@ class KaspiParser:
                 reviews_count=reviews_count,
                 min_price=min_price,
                 max_price=max_price,
+                images=images
             )
