@@ -1,7 +1,7 @@
 import re
 import json
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeout
-from app.db.models import SeedData, ProductInfo
+from app.db.schema import SeedData, ProductInfo
 
 
 class KaspiParser:

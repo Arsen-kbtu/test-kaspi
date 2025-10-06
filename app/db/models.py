@@ -1,16 +1,14 @@
-from pydantic import BaseModel, HttpUrl, Field
-from typing import List, Optional
-
-class SeedData(BaseModel):
-    """Входные данные для парсера."""
-    url: HttpUrl
+from sqlalchemy import Column, Integer, String, Float, JSON
+from app.db.database import Base
 
 
-class ProductInfo(BaseModel):
-    """Результат парсинга страницы товара."""
-    name: str = Field(..., description="Название товара")
-    categories: List[str] = Field(default_factory=list, description="Категории товара")
-    rating: Optional[float] = Field(None, description="Средний рейтинг товара (0-5)")
-    reviews_count: Optional[int] = Field(None, description="Количество отзывов")
-    min_price: Optional[int] = Field(None, description="Минимальная цена в тенге")
-    max_price: Optional[int] = Field(None, description="Максимальная цена в тенге")
+class Product(Base):
+    __tablename__ = "products"
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, nullable=False)
+    categories = Column(JSON, nullable=True)
+    rating = Column(Float, nullable=True)
+    reviews_count = Column(Integer, nullable=True)
+    min_price = Column(Integer, nullable=True)
+    max_price = Column(Integer, nullable=True)
