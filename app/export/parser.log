@@ -1,0 +1,308 @@
+2025-10-06 20:00:10,658 - INFO - Запуск парсера Kaspi
+2025-10-06 20:00:10,658 - INFO - Инициализация базы данных
+2025-10-06 20:00:10,714 - INFO - Чтение seed.json файла
+2025-10-06 20:00:10,714 - INFO - Парсинг URL: https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-chernyi-123787551/?c=750000000
+2025-10-06 20:00:10,715 - INFO - Запуск процесса парсинга
+2025-10-06 20:00:17,345 - INFO - Получены данные о товаре: Смартфон Apple iPhone 16 Pro Max 256Gb черный
+2025-10-06 20:00:17,345 - INFO - Сохранение в базу данных
+2025-10-06 20:00:17,352 - INFO - Данные успешно сохранены в БД
+2025-10-06 20:00:17,352 - INFO - Сохранение данных в JSON
+2025-10-06 20:00:17,352 - INFO - Данные сохранены в файл app/export/product.json
+2025-10-06 20:00:17,353 - INFO - Работа парсера завершена успешно
+2025-10-06 20:47:32,486 - INFO - Запуск парсера Kaspi
+2025-10-06 20:47:32,487 - INFO - Инициализация базы данных
+2025-10-06 20:47:32,532 - INFO - Чтение seed.json файла
+2025-10-06 20:47:32,533 - INFO - Парсинг URL: https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-chernyi-123787551/?c=750000000
+2025-10-06 20:47:32,533 - INFO - Запуск процесса парсинга
+2025-10-06 20:47:38,006 - ERROR - Ошибка выполнения: 'KaspiParser' object has no attribute 'export_path'
+Traceback (most recent call last):
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\app\main.py", line 55, in main
+    product = parser.parse(seed)
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\app\parser\parser.py", line 63, in parse
+    with self.export_path.open("a", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^
+AttributeError: 'KaspiParser' object has no attribute 'export_path'
+2025-10-06 20:49:24,816 - INFO - Запуск парсера Kaspi
+2025-10-06 20:49:24,816 - INFO - Инициализация базы данных
+2025-10-06 20:49:24,865 - INFO - Чтение seed.json файла
+2025-10-06 20:49:24,865 - INFO - Парсинг URL: https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-chernyi-123787551/?c=750000000
+2025-10-06 20:49:24,866 - INFO - Запуск процесса парсинга
+2025-10-06 20:50:02,314 - ERROR - Ошибка выполнения: Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator(".sellers-table__price-cell-text:not(._installments-price)").nth(1)
+Traceback (most recent call last):
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\app\main.py", line 55, in main
+    product = parser.parse(seed)
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\app\parser\parser.py", line 57, in parse
+    price_text = prices.nth(i).inner_text().strip()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\sync_api\_generated.py", line 16988, in inner_text
+    self._sync(self._impl_obj.inner_text(timeout=timeout))
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_locator.py", line 458, in inner_text
+    return await self._frame.inner_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_frame.py", line 695, in inner_text
+    return await self._channel.send(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_connection.py", line 558, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator(".sellers-table__price-cell-text:not(._installments-price)").nth(1)
+
+2025-10-06 20:54:33,095 - INFO - Запуск парсера Kaspi
+2025-10-06 20:54:33,095 - INFO - Инициализация базы данных
+2025-10-06 20:54:33,146 - INFO - Чтение seed.json файла
+2025-10-06 20:54:33,146 - INFO - Парсинг URL: https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-chernyi-123787551/?c=750000000
+2025-10-06 20:54:33,147 - INFO - Запуск процесса парсинга
+2025-10-06 20:54:40,572 - INFO - Получены данные о товаре: Смартфон Apple iPhone 16 Pro Max 256Gb черный
+2025-10-06 20:54:40,573 - INFO - Сохранение в базу данных
+2025-10-06 20:54:40,580 - INFO - Данные успешно сохранены в БД
+2025-10-06 20:54:40,580 - INFO - Сохранение данных в JSON
+2025-10-06 20:54:40,581 - INFO - Данные сохранены в файл app/export/product.json
+2025-10-06 20:54:40,581 - INFO - Работа парсера завершена успешно
+2025-10-06 20:57:03,672 - INFO - Запуск парсера Kaspi
+2025-10-06 20:57:03,673 - INFO - Инициализация базы данных
+2025-10-06 20:57:03,718 - INFO - Чтение seed.json файла
+2025-10-06 20:57:03,719 - INFO - Парсинг URL: https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-chernyi-123787551/?c=750000000
+2025-10-06 20:57:03,719 - INFO - Запуск процесса парсинга
+2025-10-06 20:57:40,792 - ERROR - Ошибка выполнения: Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("a[href^=\"/shop/info/merchant\"]:not(.rating-count)").nth(1)
+Traceback (most recent call last):
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\app\main.py", line 55, in main
+    product = parser.parse(seed)
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\app\parser\parser.py", line 60, in parse
+    seller = sellers.nth(i).inner_text().strip()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\sync_api\_generated.py", line 16988, in inner_text
+    self._sync(self._impl_obj.inner_text(timeout=timeout))
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_locator.py", line 458, in inner_text
+    return await self._frame.inner_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_frame.py", line 695, in inner_text
+    return await self._channel.send(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_connection.py", line 558, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("a[href^=\"/shop/info/merchant\"]:not(.rating-count)").nth(1)
+
+2025-10-06 21:01:46,163 - INFO - Запуск парсера Kaspi
+2025-10-06 21:01:46,163 - INFO - Инициализация базы данных
+2025-10-06 21:01:46,210 - INFO - Чтение seed.json файла
+2025-10-06 21:01:46,210 - INFO - Парсинг URL: https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-chernyi-123787551/?c=750000000
+2025-10-06 21:01:46,210 - INFO - Запуск процесса парсинга
+2025-10-06 21:01:55,134 - INFO - Получены данные о товаре: Смартфон Apple iPhone 16 Pro Max 256Gb черный
+2025-10-06 21:01:55,134 - INFO - Сохранение в базу данных
+2025-10-06 21:01:55,140 - INFO - Данные успешно сохранены в БД
+2025-10-06 21:01:55,141 - INFO - Сохранение данных в JSON
+2025-10-06 21:01:55,141 - INFO - Данные сохранены в файл app/export/product.json
+2025-10-06 21:01:55,141 - INFO - Работа парсера завершена успешно
+2025-10-06 21:02:23,315 - INFO - Запуск парсера Kaspi
+2025-10-06 21:02:23,316 - INFO - Инициализация базы данных
+2025-10-06 21:02:23,363 - INFO - Чтение seed.json файла
+2025-10-06 21:02:23,363 - INFO - Парсинг URL: https://kaspi.kz/shop/p/uniorange-i2-ultra-belyi-141562123/?c=750000000
+2025-10-06 21:02:23,363 - INFO - Запуск процесса парсинга
+2025-10-06 21:02:27,367 - INFO - Получены данные о товаре: Робот-пылесос Uniorange i2 Ultra белый
+2025-10-06 21:02:27,367 - INFO - Сохранение в базу данных
+2025-10-06 21:02:27,374 - INFO - Данные успешно сохранены в БД
+2025-10-06 21:02:27,375 - INFO - Сохранение данных в JSON
+2025-10-06 21:02:27,375 - INFO - Данные сохранены в файл app/export/product.json
+2025-10-06 21:02:27,376 - INFO - Работа парсера завершена успешно
+2025-10-06 21:03:01,385 - INFO - Запуск парсера Kaspi
+2025-10-06 21:03:01,385 - INFO - Инициализация базы данных
+2025-10-06 21:03:01,432 - INFO - Чтение seed.json файла
+2025-10-06 21:03:01,433 - INFO - Парсинг URL: https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-chernyi-123787551/?c=750000000
+2025-10-06 21:03:01,433 - INFO - Запуск процесса парсинга
+2025-10-06 21:03:09,806 - INFO - Получены данные о товаре: Смартфон Apple iPhone 16 Pro Max 256Gb черный
+2025-10-06 21:03:09,806 - INFO - Сохранение в базу данных
+2025-10-06 21:03:09,813 - INFO - Данные успешно сохранены в БД
+2025-10-06 21:03:09,813 - INFO - Сохранение данных в JSON
+2025-10-06 21:03:09,813 - INFO - Данные сохранены в файл app/export/product.json
+2025-10-06 21:03:09,814 - INFO - Работа парсера завершена успешно
+2025-10-06 21:06:13,676 - INFO - Запуск парсера Kaspi
+2025-10-06 21:06:13,677 - INFO - Инициализация базы данных
+2025-10-06 21:06:13,737 - INFO - Чтение seed.json файла
+2025-10-06 21:06:13,738 - INFO - Парсинг URL: https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-chernyi-123787551/?c=750000000
+2025-10-06 21:06:13,738 - INFO - Запуск процесса парсинга
+2025-10-06 21:06:22,263 - INFO - Получены данные о товаре: Смартфон Apple iPhone 16 Pro Max 256Gb черный
+2025-10-06 21:06:22,263 - INFO - Сохранение в базу данных
+2025-10-06 21:06:22,270 - INFO - Данные успешно сохранены в БД
+2025-10-06 21:06:22,270 - INFO - Сохранение данных в JSON
+2025-10-06 21:06:22,271 - INFO - Данные сохранены в файл app/export/product.json
+2025-10-06 21:06:22,272 - INFO - Работа парсера завершена успешно
+2025-10-06 21:07:13,417 - INFO - Запуск парсера Kaspi
+2025-10-06 21:07:13,417 - INFO - Инициализация базы данных
+2025-10-06 21:07:13,463 - INFO - Чтение seed.json файла
+2025-10-06 21:07:13,463 - INFO - Парсинг URL: https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-chernyi-123787551/?c=750000000
+2025-10-06 21:07:13,464 - INFO - Запуск процесса парсинга
+2025-10-06 21:07:53,439 - ERROR - Ошибка выполнения: Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("a[href^=\"/shop/info/merchant\"]:not(.rating-count)").nth(1)
+Traceback (most recent call last):
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\app\main.py", line 55, in main
+    product = parser.parse(seed)
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\app\parser\parser.py", line 60, in parse
+    seller = sellers.nth(i).inner_text().strip()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\sync_api\_generated.py", line 16988, in inner_text
+    self._sync(self._impl_obj.inner_text(timeout=timeout))
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_locator.py", line 458, in inner_text
+    return await self._frame.inner_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_frame.py", line 695, in inner_text
+    return await self._channel.send(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_connection.py", line 558, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("a[href^=\"/shop/info/merchant\"]:not(.rating-count)").nth(1)
+
+2025-10-06 21:08:23,638 - INFO - Запуск парсера Kaspi
+2025-10-06 21:08:23,639 - INFO - Инициализация базы данных
+2025-10-06 21:08:23,692 - INFO - Чтение seed.json файла
+2025-10-06 21:08:23,692 - INFO - Парсинг URL: https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-chernyi-123787551/?c=750000000
+2025-10-06 21:08:23,692 - INFO - Запуск процесса парсинга
+2025-10-06 21:08:32,078 - INFO - Получены данные о товаре: Смартфон Apple iPhone 16 Pro Max 256Gb черный
+2025-10-06 21:08:32,079 - INFO - Сохранение в базу данных
+2025-10-06 21:08:32,085 - INFO - Данные успешно сохранены в БД
+2025-10-06 21:08:32,086 - INFO - Сохранение данных в JSON
+2025-10-06 21:08:32,086 - INFO - Данные сохранены в файл app/export/product.json
+2025-10-06 21:08:32,087 - INFO - Работа парсера завершена успешно
+2025-10-06 21:08:47,000 - INFO - Запуск парсера Kaspi
+2025-10-06 21:08:47,000 - INFO - Инициализация базы данных
+2025-10-06 21:08:47,047 - INFO - Чтение seed.json файла
+2025-10-06 21:08:47,048 - INFO - Парсинг URL: https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-chernyi-123787551/?c=750000000
+2025-10-06 21:08:47,048 - INFO - Запуск процесса парсинга
+2025-10-06 21:09:25,110 - ERROR - Ошибка выполнения: Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("a[href^=\"/shop/info/merchant\"]:not(.rating-count)").nth(1)
+Traceback (most recent call last):
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\app\main.py", line 55, in main
+    product = parser.parse(seed)
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\app\parser\parser.py", line 60, in parse
+    seller = sellers.nth(i).inner_text().strip()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\sync_api\_generated.py", line 16988, in inner_text
+    self._sync(self._impl_obj.inner_text(timeout=timeout))
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_locator.py", line 458, in inner_text
+    return await self._frame.inner_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_frame.py", line 695, in inner_text
+    return await self._channel.send(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhexa\OneDrive\Рабочий стол\code\test-kaspi\venv\Lib\site-packages\playwright\_impl\_connection.py", line 558, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("a[href^=\"/shop/info/merchant\"]:not(.rating-count)").nth(1)
+
+2025-10-06 21:14:18,077 - INFO - Запуск парсера Kaspi
+2025-10-06 21:14:18,078 - INFO - Инициализация базы данных
+2025-10-06 21:14:18,131 - INFO - Чтение seed.json файла
+2025-10-06 21:14:18,132 - INFO - Парсинг URL: https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-chernyi-123787551/?c=750000000
+2025-10-06 21:14:18,132 - INFO - Запуск процесса парсинга
+2025-10-06 21:14:40,973 - INFO - Получены данные о товаре: Смартфон Apple iPhone 16 Pro Max 256Gb черный
+2025-10-06 21:14:40,974 - INFO - Сохранение в базу данных
+2025-10-06 21:14:40,981 - INFO - Данные успешно сохранены в БД
+2025-10-06 21:14:40,981 - INFO - Сохранение данных в JSON
+2025-10-06 21:14:40,981 - INFO - Данные сохранены в файл app/export/product.json
+2025-10-06 21:14:40,982 - INFO - Работа парсера завершена успешно
+2025-10-06 21:15:00,304 - INFO - Запуск парсера Kaspi
+2025-10-06 21:15:00,305 - INFO - Инициализация базы данных
+2025-10-06 21:15:00,352 - INFO - Чтение seed.json файла
+2025-10-06 21:15:00,352 - INFO - Парсинг URL: https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-chernyi-123787551/?c=750000000
+2025-10-06 21:15:00,353 - INFO - Запуск процесса парсинга
+2025-10-06 21:15:20,644 - INFO - Получены данные о товаре: Смартфон Apple iPhone 16 Pro Max 256Gb черный
+2025-10-06 21:15:20,644 - INFO - Сохранение в базу данных
+2025-10-06 21:15:20,652 - INFO - Данные успешно сохранены в БД
+2025-10-06 21:15:20,652 - INFO - Сохранение данных в JSON
+2025-10-06 21:15:20,653 - INFO - Данные сохранены в файл app/export/product.json
+2025-10-06 21:15:20,653 - INFO - Работа парсера завершена успешно
+2025-10-06 21:15:51,614 - INFO - Запуск парсера Kaspi
+2025-10-06 21:15:51,615 - INFO - Инициализация базы данных
+2025-10-06 21:15:51,664 - INFO - Чтение seed.json файла
+2025-10-06 21:15:51,664 - INFO - Парсинг URL: https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-chernyi-123787551/?c=750000000
+2025-10-06 21:15:51,664 - INFO - Запуск процесса парсинга
+2025-10-06 21:16:11,742 - INFO - Получены данные о товаре: Смартфон Apple iPhone 16 Pro Max 256Gb черный
+2025-10-06 21:16:11,742 - INFO - Сохранение в базу данных
+2025-10-06 21:16:11,749 - INFO - Данные успешно сохранены в БД
+2025-10-06 21:16:11,749 - INFO - Сохранение данных в JSON
+2025-10-06 21:16:11,750 - INFO - Данные сохранены в файл app/export/product.json
+2025-10-06 21:16:11,750 - INFO - Работа парсера завершена успешно
+2025-10-06 21:17:16,099 - INFO - Запуск парсера Kaspi
+2025-10-06 21:17:16,099 - INFO - Инициализация базы данных
+2025-10-06 21:17:16,144 - INFO - Чтение seed.json файла
+2025-10-06 21:17:16,145 - INFO - Парсинг URL: https://kaspi.kz/shop/p/uniorange-i2-ultra-belyi-141562123/?c=750000000
+2025-10-06 21:17:16,145 - INFO - Запуск процесса парсинга
+2025-10-06 21:17:19,331 - INFO - Получены данные о товаре: Робот-пылесос Uniorange i2 Ultra белый
+2025-10-06 21:17:19,331 - INFO - Сохранение в базу данных
+2025-10-06 21:17:19,338 - INFO - Данные успешно сохранены в БД
+2025-10-06 21:17:19,338 - INFO - Сохранение данных в JSON
+2025-10-06 21:17:19,338 - INFO - Данные сохранены в файл app/export/product.json
+2025-10-06 21:17:19,339 - INFO - Работа парсера завершена успешно
+2025-10-06 21:31:19,812 - INFO - Запуск парсера Kaspi
+2025-10-06 21:31:19,813 - INFO - Инициализация базы данных
+2025-10-06 21:31:19,879 - INFO - Чтение seed.json файла
+2025-10-06 21:31:19,880 - INFO - Парсинг URL: https://kaspi.kz/shop/p/uniorange-i2-ultra-belyi-141562123/?c=750000000
+2025-10-06 21:31:19,880 - INFO - Запуск процесса парсинга
+2025-10-06 21:31:26,144 - INFO - Получены данные о товаре: Робот-пылесос Uniorange i2 Ultra белый
+2025-10-06 21:31:26,145 - INFO - Сохранение в базу данных
+2025-10-06 21:31:26,151 - INFO - Данные успешно сохранены в БД
+2025-10-06 21:31:26,152 - INFO - Сохранение данных в JSON
+2025-10-06 21:31:26,152 - INFO - Данные сохранены в файл app/export/product.json
+2025-10-06 21:31:26,153 - INFO - Работа парсера завершена успешно
+2025-10-06 21:32:21,304 - INFO - Запуск парсера Kaspi
+2025-10-06 21:32:21,304 - INFO - Инициализация базы данных
+2025-10-06 21:32:21,350 - INFO - Чтение seed.json файла
+2025-10-06 21:32:21,351 - INFO - Парсинг URL: https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-chernyi-123787551/?c=750000000
+2025-10-06 21:32:21,351 - INFO - Запуск процесса парсинга
+2025-10-06 21:32:41,336 - INFO - Получены данные о товаре: Смартфон Apple iPhone 16 Pro Max 256Gb черный
+2025-10-06 21:32:41,336 - INFO - Сохранение в базу данных
+2025-10-06 21:32:41,344 - INFO - Данные успешно сохранены в БД
+2025-10-06 21:32:41,344 - INFO - Сохранение данных в JSON
+2025-10-06 21:32:41,345 - INFO - Данные сохранены в файл app/export/product.json
+2025-10-06 21:32:41,346 - INFO - Работа парсера завершена успешно
+2025-10-06 22:29:22,978 - INFO - Запуск парсера Kaspi
+2025-10-06 22:29:22,978 - INFO - Инициализация базы данных
+2025-10-06 22:29:23,038 - INFO - Чтение seed.json файла
+2025-10-06 22:29:23,041 - INFO - Парсинг URL: https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-chernyi-123787551/?c=750000000
+2025-10-06 22:29:23,041 - INFO - Запуск процесса парсинга
+2025-10-06 22:29:45,938 - INFO - Получены данные о товаре: Смартфон Apple iPhone 16 Pro Max 256Gb черный
+2025-10-06 22:29:45,939 - INFO - Сохранение в базу данных
+2025-10-06 22:29:45,951 - INFO - Данные успешно сохранены в БД
+2025-10-06 22:29:45,951 - INFO - Сохранение данных в JSON
+2025-10-06 22:29:45,953 - INFO - Данные сохранены в файл app/export/product.json
+2025-10-06 22:29:45,954 - INFO - Работа парсера завершена успешно
