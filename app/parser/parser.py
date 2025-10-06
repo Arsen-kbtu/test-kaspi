@@ -1,3 +1,4 @@
+import os
 import re
 import json
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeout
@@ -9,6 +10,9 @@ class KaspiParser:
         self.headless = headless
 
     def parse(self, seed: SeedData) -> ProductInfo:
+        os.makedirs("app/export", exist_ok=True)
+        with open("app/export/offers.jsonl", "w", encoding="utf-8") as f:
+            pass  # Открытие файла в режиме 'w' очищает его содержимое
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=self.headless)
             page = browser.new_page()
@@ -46,38 +50,58 @@ class KaspiParser:
             except Exception:
                 pass
 
-            # Минимальная цена
-            min_price = None
-            price_elements = page.locator('.sellers-table__price-cell-text:not(._installments-price)')
-            if price_elements.count() > 0:
-                text = price_elements.first.text_content().strip()
-                min_price = int(re.sub(r"[^\d]", "", text))
+            all_offers = []
 
-            # Максимальная цена
-            max_price = min_price
             while True:
+                # Ждём появления хотя бы одного продавца и цены
+                try:
+                    page.wait_for_selector('a[href^="/shop/info/merchant"]:not(.rating-count)', timeout=5000)
+                    page.wait_for_selector('.sellers-table__price-cell-text:not(._installments-price)', timeout=5000)
+                except PlaywrightTimeout:
+                    print("⚠️ Не дождались загрузки продавцов/цен на странице")
+                    break
+
+                # Получаем все элементы через evaluate, чтобы избежать таймаутов в headless
+                sellers = page.eval_on_selector_all(
+                    'a[href^="/shop/info/merchant"]:not(.rating-count)',
+                    'els => els.map(e => e.textContent.trim())'
+                )
+                prices = page.eval_on_selector_all(
+                    '.sellers-table__price-cell-text:not(._installments-price)',
+                    'els => els.map(e => e.textContent.trim())'
+                )
+
+                offers_count = min(len(sellers), len(prices))
+                for i in range(offers_count):
+                    try:
+                        price = int(re.sub(r"[^\d]", "", prices[i]))
+                        offer = {"seller": sellers[i], "price": price}
+                        all_offers.append(offer)
+                        with open("app/export/offers.jsonl", "a", encoding="utf-8") as f:
+                            f.write(json.dumps(offer, ensure_ascii=False) + "\n")
+                    except Exception as e:
+                        print(f"Ошибка при обработке оффера {i}: {e}")
+
+                # --- Проверяем наличие следующей страницы ---
                 next_button = page.locator('li.pagination__el', has_text="Следующая")
                 if next_button.count() == 0:
                     break
+
                 cls = next_button.first.get_attribute("class") or ""
                 if "disabled" in cls or "inactive" in cls:
                     break
+
                 try:
                     next_button.scroll_into_view_if_needed()
                     next_button.click()
+                    page.wait_for_timeout(1000)
                 except PlaywrightTimeout:
                     page.evaluate("(el) => el.click()", next_button.first)
-                # page.wait_for_timeout(1500)
-                try:
-                    page.wait_for_selector('.sellers-table__price-cell-text:not(._installments-price)', timeout=5000)
-                except PlaywrightTimeout:
-                    break
 
-            price_elements = page.locator('.sellers-table__price-cell-text:not(._installments-price)')
-            if price_elements.count() > 0:
-                text = price_elements.last.text_content().strip()
-                max_price = int(re.sub(r"[^\d]", "", text))
-
+            # --- Подсчёт min/max ---
+            prices_only = [offer["price"] for offer in all_offers]
+            min_price = min(prices_only) if prices_only else None
+            max_price = max(prices_only) if prices_only else None
             images = []
             image_elements = page.locator(".item__slider-thumb-pic")
             count = image_elements.count()
@@ -100,6 +124,7 @@ class KaspiParser:
                 categories=categories,
                 rating=rating_value,
                 reviews_count=reviews_count,
+                offers_count=len(all_offers),
                 min_price=min_price,
                 max_price=max_price,
                 images=images

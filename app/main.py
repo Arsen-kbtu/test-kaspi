@@ -63,9 +63,10 @@ def main():
             categories=product.categories,
             rating=product.rating,
             reviews_count=product.reviews_count,
+            offers_count=product.offers_count,
             min_price=product.min_price,
             max_price=product.max_price,
-            images=product.images,  # Добавляем сохранение изображений
+            images=product.images,
         )
         db.add(db_product)
         db.commit()

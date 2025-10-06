@@ -1,19 +1,27 @@
 {
-  "name": "Смартфон Apple iPhone 16 Pro Max 256Gb черный",
+  "name": "Робот-пылесос Uniorange i2 Ultra белый",
   "categories": [
     "Kaspi Магазин",
-    "Телефоны и гаджеты",
-    "Смартфоны"
+    "Бытовая техника",
+    "Малая техника для дома",
+    "Роботы-пылесосы"
   ],
-  "rating": 4.9,
-  "reviews_count": 1299,
-  "min_price": 713012,
-  "max_price": 914445,
+  "rating": 5.0,
+  "reviews_count": 127,
+  "offers_count": 2,
+  "min_price": 620000,
+  "max_price": 995800,
   "images": [
-    "https://resources.cdn-kaspi.kz/img/m/p/hcf/h69/87295489343518.png?format=gallery-medium",
-    "https://resources.cdn-kaspi.kz/img/m/p/h08/hd3/87295489376286.png?format=gallery-medium",
-    "https://resources.cdn-kaspi.kz/img/m/p/h04/h8b/87295489409054.png?format=gallery-medium",
-    "https://resources.cdn-kaspi.kz/img/m/p/hfc/h0c/87295489441822.png?format=gallery-medium",
-    "https://i.ytimg.com/vi/XyBdLR0rskA/default.jpg"
+    "https://resources.cdn-kaspi.kz/img/m/p/p5c/pdf/50978881.png?format=gallery-medium",
+    "https://resources.cdn-kaspi.kz/img/m/p/p94/pdf/50978883.png?format=gallery-medium",
+    "https://resources.cdn-kaspi.kz/img/m/p/pcc/pdf/50978885.png?format=gallery-medium",
+    "https://resources.cdn-kaspi.kz/img/m/p/pe9/pdf/50978886.png?format=gallery-medium",
+    "https://resources.cdn-kaspi.kz/img/m/p/p05/pe0/50978887.png?format=gallery-medium",
+    "https://resources.cdn-kaspi.kz/img/m/p/p21/pe0/50978888.png?format=gallery-medium",
+    "https://resources.cdn-kaspi.kz/img/m/p/p3d/pe0/50978889.png?format=gallery-medium",
+    "https://resources.cdn-kaspi.kz/img/m/p/pa9/pe2/50978890.png?format=gallery-medium",
+    "https://resources.cdn-kaspi.kz/img/m/p/pc5/pe2/50978891.png?format=gallery-medium",
+    "https://resources.cdn-kaspi.kz/img/m/p/pe1/pe2/50978892.png?format=gallery-medium",
+    "https://i.ytimg.com/vi/qXti8XyXGpo/default.jpg"
   ]
 }

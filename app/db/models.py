@@ -10,6 +10,8 @@ class Product(Base):
     categories = Column(JSON, nullable=True)
     rating = Column(Float, nullable=True)
     reviews_count = Column(Integer, nullable=True)
+    offers_count = Column(Integer, nullable=True)
     min_price = Column(Integer, nullable=True)
     max_price = Column(Integer, nullable=True)
     images = Column(JSON, nullable=True)
+
