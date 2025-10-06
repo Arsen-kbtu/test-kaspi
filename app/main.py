@@ -67,6 +67,7 @@ def main():
             min_price=product.min_price,
             max_price=product.max_price,
             images=product.images,
+            specifications=product.specifications,
         )
         db.add(db_product)
         db.commit()

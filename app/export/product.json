@@ -1,27 +1,78 @@
 {
-  "name": "Робот-пылесос Uniorange i2 Ultra белый",
+  "name": "Смартфон Apple iPhone 16 Pro Max 256Gb черный",
   "categories": [
     "Kaspi Магазин",
-    "Бытовая техника",
-    "Малая техника для дома",
-    "Роботы-пылесосы"
+    "Телефоны и гаджеты",
+    "Смартфоны"
   ],
-  "rating": 5.0,
-  "reviews_count": 127,
-  "offers_count": 2,
-  "min_price": 620000,
-  "max_price": 995800,
+  "rating": 4.9,
+  "reviews_count": 1299,
+  "offers_count": 76,
+  "min_price": 709491,
+  "max_price": 914445,
   "images": [
-    "https://resources.cdn-kaspi.kz/img/m/p/p5c/pdf/50978881.png?format=gallery-medium",
-    "https://resources.cdn-kaspi.kz/img/m/p/p94/pdf/50978883.png?format=gallery-medium",
-    "https://resources.cdn-kaspi.kz/img/m/p/pcc/pdf/50978885.png?format=gallery-medium",
-    "https://resources.cdn-kaspi.kz/img/m/p/pe9/pdf/50978886.png?format=gallery-medium",
-    "https://resources.cdn-kaspi.kz/img/m/p/p05/pe0/50978887.png?format=gallery-medium",
-    "https://resources.cdn-kaspi.kz/img/m/p/p21/pe0/50978888.png?format=gallery-medium",
-    "https://resources.cdn-kaspi.kz/img/m/p/p3d/pe0/50978889.png?format=gallery-medium",
-    "https://resources.cdn-kaspi.kz/img/m/p/pa9/pe2/50978890.png?format=gallery-medium",
-    "https://resources.cdn-kaspi.kz/img/m/p/pc5/pe2/50978891.png?format=gallery-medium",
-    "https://resources.cdn-kaspi.kz/img/m/p/pe1/pe2/50978892.png?format=gallery-medium",
-    "https://i.ytimg.com/vi/qXti8XyXGpo/default.jpg"
-  ]
+    "https://resources.cdn-kaspi.kz/img/m/p/hcf/h69/87295489343518.png?format=gallery-medium",
+    "https://resources.cdn-kaspi.kz/img/m/p/h08/hd3/87295489376286.png?format=gallery-medium",
+    "https://resources.cdn-kaspi.kz/img/m/p/h04/h8b/87295489409054.png?format=gallery-medium",
+    "https://resources.cdn-kaspi.kz/img/m/p/hfc/h0c/87295489441822.png?format=gallery-medium",
+    "https://i.ytimg.com/vi/XyBdLR0rskA/default.jpg"
+  ],
+  "specifications": {
+    "Общие": {
+      "Код товара": "123787551",
+      "4G (LTE)": "Да",
+      "Стандарт": "GSM 850/900/1800/1900, 3G, 4G LTE, 5G",
+      "Операционная система": "iOS 18",
+      "SIM-карта": "nano SIM + eSIM",
+      "Материал": "металл и стекло",
+      "Поддержка 5G": "Да",
+      "Технология NFC": "Да",
+      "Цвет": "черный"
+    },
+    "Дисплей": {
+      "Технология экрана": "OLED",
+      "Тип экрана": "OLED, True Tone, HDR, Super Retina XDR",
+      "Диагональ": "6.9 дюйм",
+      "Разрешение дисплея": "2868x1320, 460 ppi",
+      "Автоматический поворот экрана": "Да",
+      "Устойчивое к царапинам стекло": "Да"
+    },
+    "Процессор и память": {
+      "Размер оперативной памяти": "8 ГБ",
+      "Процессор": "6-ядерный Apple A18 Pro",
+      "Объем встроенной памяти": "256.0 ГБ",
+      "Слот карт памяти": "Нет"
+    },
+    "Фотокамера и мультимедиа": {
+      "Количество мегапикселей основной фотокамеры": "48.0 Мпикс",
+      "Фотокамера": "48 Мп + 48 Мп + 12 Мп, светодиодная вспышка",
+      "Видеосъемка": "3840х2160 пикс 120 к/с",
+      "Количество мегапикселей фронтальной камеры": "12.0 Мпикс",
+      "Фронтальная камера": "12 Мп",
+      "Форматы аудио": "AAC, FLAC, Apple Lossless, Dolby Atmos, Dolby Digital, Dolby Digital Plus, APAC"
+    },
+    "Батарея и время работы": {
+      "Поддержка беспроводной зарядки": "Да",
+      "Поддержка быстрой зарядки": "Да",
+      "Тип аккумулятора": "Li-ion",
+      "Емкость аккумулятора": "4685.0 мАч",
+      "Время работы в режиме прослушивания музыки": "85.0 ч"
+    },
+    "Особенности и дополнительная информация": {
+      "Интерфейс": "USB Type-C",
+      "Конструкция": "водозащита, двойная камера, пылезащита",
+      "Особенности": "6‑ядерный графический процессор",
+      "Комплектация": "смартфон, кабель, инструкция"
+    },
+    "Органайзер и другие функции": {
+      "Датчики": "компас, барометр, акселерометр, гироскоп, датчик приближения, датчик освещенности, распознавание лица",
+      "Режим полета": "Да",
+      "Органайзер": "будильник, календарь, калькулятор",
+      "Управление": "голосовое управление, голосовой набор"
+    },
+    "Вес и габариты": {
+      "Габариты": "77.6x163x8.25 мм",
+      "Вес": "277.0 г"
+    }
+  }
 }

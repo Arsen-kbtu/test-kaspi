@@ -14,4 +14,5 @@ class Product(Base):
     min_price = Column(Integer, nullable=True)
     max_price = Column(Integer, nullable=True)
     images = Column(JSON, nullable=True)
+    specifications = Column(JSON, nullable=True)
 

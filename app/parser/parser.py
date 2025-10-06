@@ -117,6 +117,36 @@ class KaspiParser:
                         images.append(src)
                 except Exception as e:
                     self.logger.error(f"Ошибка при получении изображения: {e}")
+
+            specifications = {}
+            try:
+                spec_sections = page.query_selector_all("dl.specifications-list__el")
+
+                for section in spec_sections:
+                    # Получаем заголовок группы
+                    header_el = section.query_selector("h4.specifications-list__header")
+                    if not header_el:
+                        continue
+
+                    section_name = header_el.inner_text().strip()
+                    specifications[section_name] = {}
+
+                    # Получаем все спецификации внутри группы
+                    specs = section.query_selector_all("dl.specifications-list__spec")
+                    for spec in specs:
+                        term_el = spec.query_selector(".specifications-list__spec-term-text")
+                        def_el = spec.query_selector(".specifications-list__spec-definition")
+
+                        if term_el and def_el:
+                            key = term_el.inner_text().strip()
+                            value = def_el.inner_text().strip()
+                            # Удаляем двоеточие в конце ключа, если оно есть
+                            if key.endswith(':'):
+                                key = key[:-1]
+                            specifications[section_name][key] = value
+            except Exception as e:
+                print(f"Ошибка при парсинге характеристик: {e}")
+
             browser.close()
             # Добавляем изображения в результат
             return ProductInfo(
@@ -127,5 +157,6 @@ class KaspiParser:
                 offers_count=len(all_offers),
                 min_price=min_price,
                 max_price=max_price,
-                images=images
+                images=images,
+                specifications = specifications
             )

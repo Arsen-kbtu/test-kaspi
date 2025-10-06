@@ -1,7 +1,8 @@
 from datetime import datetime
 
 from pydantic import BaseModel, HttpUrl, Field
-from typing import List, Optional
+from typing import List, Optional, Dict
+
 
 class SeedData(BaseModel):
     """Входные данные для парсера."""
@@ -18,6 +19,7 @@ class ProductInfo(BaseModel):
     min_price: Optional[int] = Field(None, description="Минимальная цена в тенге")
     max_price: Optional[int] = Field(None, description="Максимальная цена в тенге")
     images: Optional[List[str]] = None
+    specifications: Dict[str, Dict[str, str]] = {}
 
 class OfferInfo(BaseModel):
     merchant_name: str
